@@ -27,14 +27,17 @@ class TodoItem extends StatelessWidget {
               onDismissed: ((DismissDirection dir) {
                 onDeleteItem(todo.id);
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text("${todo.todoText!} deleted")),
+                  SnackBar(content: Text("${todo.todoText!} deleted"),
+                  action: SnackBarAction(label: "Dismiss", onPressed:(){
+                    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                  } )),
                 );
               }),
               background: Container(
                 color: red,
                 alignment: Alignment.centerLeft,
                 child: const Text(
-                  " Deleting... ",
+                  "  Deleting...  ",
                   style: TextStyle(color: white, fontSize: 20),
                 ),
               ),
