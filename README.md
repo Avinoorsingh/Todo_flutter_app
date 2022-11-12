@@ -1,7 +1,7 @@
 # Todo flutter app
 
 #Screenshots
-![alt text](https://drive.google.com/file/d/1HCDMHfg1_K5rHI9-_Aq9NCtUpOLT1gZq/view)
+![image](https://drive.google.com/uc?export=view&id=1HCDMHfg1_K5rHI9-_Aq9NCtUpOLT1gZq)
 
 ![alt text](https://drive.google.com/file/d/1HHa9ur0g4Rfqk3p7zTx3uf8O3GI--Qc1/view?usp=share_link)
 
