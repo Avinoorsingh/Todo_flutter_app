@@ -11,16 +11,27 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  //Fetched todoList.
   final todosList = Todo.todoList();
-  List<Todo> _foundToDo = [];
+  
+  //return searched Todos relevant to the keyword that user entered. 
+  List<Todo> searchedTodo = [];
+  
+  //controller for todo to be added.
   final todoController = TextEditingController();
+  
+  //changed to true when clicked on add button.
   bool showAdd = false;
+  
+  //changed to true when clicked on searched button.
   bool showSearch = false;
+
+  //changed to true when there noTodo is present (no todo is relevant to the todo that the user searched for).
   bool noTodo = false;
 
   @override
   void initState() {
-    _foundToDo = todosList;
+    searchedTodo = todosList;
     super.initState();
   }
 
@@ -51,7 +62,7 @@ class _HomeState extends State<Home> {
                 Expanded(
                   child: ListView(
                     children: [
-                      for (Todo todoo in _foundToDo.reversed)
+                      for (Todo todoo in searchedTodo.reversed)
                         TodoItem(
                           todo: todoo,
                           onToDoChanged: handleTodoChange,
@@ -176,7 +187,7 @@ class _HomeState extends State<Home> {
       });
     }
     setState(() {
-      _foundToDo = results;
+      searchedTodo = results;
     });
   }
 
