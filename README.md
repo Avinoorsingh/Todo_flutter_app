@@ -1,6 +1,23 @@
 # Todo flutter app
 
-A new Flutter project.
+## User can Add, Edit, Update, Search and Delete the Todos.
+
+## Screenshots :point_down:
+
+## 1st screenshot
+![image](https://drive.google.com/uc?export=view&id=1HCDMHfg1_K5rHI9-_Aq9NCtUpOLT1gZq)
+
+## 2nd screenshot
+![image](https://drive.google.com/uc?export=view&id=1HHa9ur0g4Rfqk3p7zTx3uf8O3GI--Qc1)
+
+## 3rd screenshot
+![image](https://drive.google.com/uc?export=view&id=1HCIneCIg8q0LlwE0AZABlwXAQJ85JPnQ)
+
+## 4th screenshot
+![image](https://drive.google.com/uc?export=view&id=1HWdmLjrjIJAo6yjZYtv7lPElVZgQIlH0)
+
+## 5th screenshot
+![image](https://drive.google.com/uc?export=view&id=1HgjeuSuhc33JpYdywB5SzpTK-8rB1CEd)
 
 ## Getting Started
 
