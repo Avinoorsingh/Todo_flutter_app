@@ -96,28 +96,31 @@ class _HomeState extends State<Home> {
                     child: TextField(
                       controller: todoController,
                       decoration: InputDecoration(
-                          hintText: 'Add a new todo', 
-                          border: InputBorder.none,
-                          suffixIcon:ElevatedButton(
-                    onPressed: () {
-                      if(todoController.text.isNotEmpty){
-                      addTodo(todoController.text);
-                      }else{
-                       //empty todo will not be saved! 
-                      }
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white70,
-                      foregroundColor: greenShade,
-                      shadowColor: Colors.transparent,
-                      elevation: 0,
-                    ),
-                    child: const Icon(Icons.send_sharp),
-                  ), ),
+                        hintText: 'Add a new todo',
+                        border: InputBorder.none,
+                        suffixIcon: ElevatedButton(
+                          onPressed: () {
+                            if (todoController.text.isNotEmpty) {
+                              addTodo(todoController.text);
+                            } else {
+                              //empty todo will not be saved!
+                            }
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white70,
+                            foregroundColor: greenShade,
+                            shadowColor: Colors.transparent,
+                            elevation: 0,
+                          ),
+                          child: const Icon(Icons.send_sharp),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              },
+              } else ...{
+                const SizedBox(height: 20),
+              }
             ]),
           ),
         ],
@@ -125,21 +128,21 @@ class _HomeState extends State<Home> {
     );
   }
 
-//when todo is selected or unselected
+//function that is called when todo is selected or unselected
   void handleTodoChange(Todo todo) {
     setState(() {
       todo.isDone = !todo.isDone;
     });
   }
 
-//delete the todo
+//function to delete the todo
   void deleteTodo(String id) {
     setState(() {
       todosList.removeWhere((item) => item.id == id);
     });
   }
 
-//add the todo
+//function to add the todo
   void addTodo(String toDo) {
     setState(() {
       todosList.add(Todo(
@@ -177,7 +180,6 @@ class _HomeState extends State<Home> {
     });
   }
 
-
 //searchBox Widget
   Widget searchBox() {
     return Container(
@@ -207,6 +209,9 @@ class _HomeState extends State<Home> {
     );
   }
 
+
+//bottom navigation bar of the app 
+//List       Add        Search
   BottomNavigationBar bottomAppBar() {
     return BottomNavigationBar(
       selectedItemColor: greenShade,
@@ -214,13 +219,18 @@ class _HomeState extends State<Home> {
       elevation: 20,
       iconSize: 60.0,
       items: [
-        const BottomNavigationBarItem(
-            icon: Icon(
+        BottomNavigationBarItem(
+          icon: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+            Icon(
               Icons.list,
               size: 40.0,
               color: greenShade,
             ),
-            label: 'TODO',),
+          ]),
+          label: 'TODO',
+        ),
         BottomNavigationBarItem(
             icon: Container(
               alignment: Alignment.topCenter,
@@ -249,14 +259,14 @@ class _HomeState extends State<Home> {
         if (value == 1) {
           setState(() {
             showAdd = !showAdd;
-            showSearch=false;
+            showSearch = false;
           });
         }
         //value==2 for showSearch Widget
         if (value == 2) {
           setState(() {
             showSearch = !showSearch;
-            showAdd=false;
+            showAdd = false;
           });
         }
       },

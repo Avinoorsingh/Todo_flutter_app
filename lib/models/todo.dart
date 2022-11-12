@@ -1,4 +1,3 @@
-
 class Todo {
   String? id;
   String? todoText;

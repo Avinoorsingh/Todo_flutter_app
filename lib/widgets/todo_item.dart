@@ -6,6 +6,7 @@ class TodoItem extends StatelessWidget {
   final Todo todo;
   // ignore: prefer_typing_uninitialized_variables
   final onToDoChanged;
+
   // ignore: prefer_typing_uninitialized_variables
   final onDeleteItem;
 
@@ -15,7 +16,7 @@ class TodoItem extends StatelessWidget {
     required this.onToDoChanged,
     required this.onDeleteItem,
   }) : super(key: key);
-
+//todo_item page is where all todos are getting rendered.
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -37,8 +38,8 @@ class TodoItem extends StatelessWidget {
                 color: red,
                 alignment: Alignment.centerLeft,
                 child: const Text(
-                  "  Deleting...  ",
-                  style: TextStyle(color: white, fontSize: 20),
+                  " Deleting Todo...",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
               child: ListTile(
