@@ -2,7 +2,7 @@
 
 ## User can Add, Edit, Update, Search and Delete the Todos.
 
-## Screenshots
+## Screenshots :point_down:
 
 ## 1st screenshot
 ![image](https://drive.google.com/uc?export=view&id=1HCDMHfg1_K5rHI9-_Aq9NCtUpOLT1gZq)
